@@ -1,4 +1,3 @@
-"use client" 
 
 import { Auth } from '@supabase/auth-ui-react'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
