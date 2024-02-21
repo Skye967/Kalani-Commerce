@@ -5,11 +5,9 @@ import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
 import Link from 'next/link'
 
-type Props = {}
 
-function AuthPage({ }: Props) {
+function AuthPage() {
     const supabase = createClientComponentClient()
-    
 
   return (
       <>
