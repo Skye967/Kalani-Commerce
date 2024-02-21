@@ -1,8 +1,8 @@
 import prisma from "@/app/libs/prisma";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { Context } from "vm";
 
-export async function GET( context: Context) {
+export async function GET(req: NextRequest, context: Context) {
 
     try {
         const { id } = context.params;
