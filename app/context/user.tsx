@@ -40,7 +40,6 @@ const Provider = ({ children }: {children: React.ReactNode}) => {
         if (res && res.data.user) {
             
             const theUser = res.data.user;
-            console.log(theUser)
             setUser(theUser);
             setId(theUser.id);
             setEmail(theUser.email);
