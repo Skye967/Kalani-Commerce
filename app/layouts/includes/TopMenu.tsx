@@ -84,6 +84,9 @@ function TopMenu() {
             <li className="px-3 hover:underline cursor-pointer">
               Help & Contact
             </li>
+            <Link className="px-3 hover:underline cursor-pointer" href="/">
+              Home
+            </Link>
           </ul>
           <ul
             id="TopMenuRight"
@@ -94,21 +97,21 @@ function TopMenu() {
               Ship to
             </li>
             <ClientOnly>
-            <li className="px-3 hover:underline cursor-pointer">
-              <div onClick={()=>router.push('/cart')} className="relative">
-                <AiOutlineShoppingCart size={22} />
+              <li className="px-3 hover:underline cursor-pointer">
+                <div onClick={() => router.push("/cart")} className="relative">
+                  <AiOutlineShoppingCart size={22} />
 
-                {cart.cartCount() > 0 ? (
-                  <div className="absolute text-[10px] -top-[2px] -right-[5px] bg-red-500 w-[14px] rounded-full text-white">
-                    <div className="flex items-center justify-center -mt-[1px] ">
-                      {cart.cartCount()}
+                  {cart.cartCount() > 0 ? (
+                    <div className="absolute text-[10px] -top-[2px] -right-[5px] bg-red-500 w-[14px] rounded-full text-white">
+                      <div className="flex items-center justify-center -mt-[1px] ">
+                        {cart.cartCount()}
+                      </div>
                     </div>
-                  </div>
-                ) : (
-                  <div></div>
-                )}
-              </div>
-            </li>
+                  ) : (
+                    <div></div>
+                  )}
+                </div>
+              </li>
             </ClientOnly>
           </ul>
         </div>

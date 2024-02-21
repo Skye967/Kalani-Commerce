@@ -29,7 +29,6 @@ const Provider = ({ children }: {children: React.ReactNode}) => {
         if (res && res.data.session) {
             return res.data.session;
         }
-        console.log(res.data.session)
         clearUser()
         return null
     }
