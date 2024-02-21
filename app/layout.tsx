@@ -6,8 +6,8 @@ import UserProvider from './context/user'
 import CartProvider from './context/cart'
 
 export const metadata: Metadata = {
-  title: 'eBay Clone',
-  description: 'eBay Clone',
+  title: 'Kalani E-commerce',
+  description: 'Demonstrating Next.js, Typescript, Supabase, and Prisma in a E-commerce web application',
 }
 
 export default function RootLayout({
