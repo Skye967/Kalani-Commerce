@@ -36,7 +36,7 @@ function AuthPage() {
             onlyThirdPartyProviders
             appearance={{ theme: ThemeSupa }}
             providers={["google"]}
-            redirectTo={callback ? `${callback?.location.origin}/auth/callback` : "/"}
+            redirectTo={`${callback?.location.origin}/auth/callback`}
             supabaseClient={supabase}
           />
         </div>
