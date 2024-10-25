@@ -7,15 +7,15 @@ import Link from "next/link";
 import React from "react";
 
 function AuthPage() {
-    const supabase = createClientComponentClient();
-    const [callback, setCallback] = React.useState<
-      Window & typeof globalThis | null
-    >(null);
+  const supabase = createClientComponentClient();
+  const [callback, setCallback] = React.useState<
+    Window & typeof globalThis | null
+  >(null);
 
   React.useEffect(() => {
-      if (window) {
-          setCallback(window)
-        }
+    if (window) {
+      setCallback(window)
+    }
   });
 
   return (

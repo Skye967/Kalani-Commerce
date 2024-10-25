@@ -22,7 +22,7 @@ import ClientOnly from "../components/ClientOnly";
 
 type Props = {};
 
-function Checkout({}: Props) {
+function Checkout({ }: Props) {
   const user = useUser();
   const cart = useCart();
   const router = useRouter();
@@ -267,7 +267,6 @@ function Checkout({}: Props) {
                 </div>
               </ClientOnly>
               <div className="flex items-center p-4 justify-center gap-2 border-t">
-                <img width={50} src="/images/logo.svg" />
                 <div className="font-light mb-2 mt-2">MONEY BACK GAURANTEE</div>
               </div>
             </div>

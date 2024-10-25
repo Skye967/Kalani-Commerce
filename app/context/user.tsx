@@ -1,19 +1,19 @@
 "use client"
 
-import { createContext, useState, useEffect, useContext, ReactNode } from "react"
+import { createContext, useState, useEffect, useContext} from "react"
 import { useRouter } from "next/navigation"
 import { User, createClientComponentClient } from "@supabase/auth-helpers-nextjs"
 
 const Context = createContext<{
-  user: User | null;
-  id: string | null;
-  email: string | null | undefined;
-  name: string | null | undefined;
-  picture: string | null | undefined;
-  singOut: () => Promise<void>;
+    user: User | null;
+    id: string | null;
+    email: string | null | undefined;
+    name: string | null | undefined;
+    picture: string | null | undefined;
+    singOut: () => Promise<void>;
 } | null>(null);
 
-const Provider = ({ children }: {children: React.ReactNode}) => {
+const Provider = ({ children }: { children: React.ReactNode }) => {
     const router = useRouter();
 
     const [user, setUser] = useState<User | null>(null);
@@ -35,10 +35,10 @@ const Provider = ({ children }: {children: React.ReactNode}) => {
 
     const getCurrentUser = async () => {
         if (id) return
-        
+
         const res = await supabaseClient.auth.getUser()
         if (res && res.data.user) {
-            
+
             const theUser = res.data.user;
             setUser(theUser);
             setId(theUser.id);
@@ -56,7 +56,7 @@ const Provider = ({ children }: {children: React.ReactNode}) => {
         }
         isUser();
     }, [])
-    
+
     const singOut = async () => {
         await supabaseClient.auth.signOut();
         clearUser();
