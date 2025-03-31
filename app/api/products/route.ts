@@ -5,11 +5,9 @@ export async function GET() {
   try {
       const products = await prisma.products.findMany()
 
-    await prisma.$disconnect();
     return NextResponse.json(products);
   } catch (error) {
-    console.log(error);
-    await prisma.$disconnect();
+    console.error("Failed to fetch products:", error);
     return new NextResponse("Something went wrong", { status: 400 });
   }
 }
