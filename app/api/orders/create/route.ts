@@ -1,3 +1,6 @@
+export const dynamic = 'force-dynamic'
+
+
 import prisma from "@/app/libs/prisma";
 import { NextRequest, NextResponse } from "next/server";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
